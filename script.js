@@ -5,13 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const videoSrc = img.getAttribute("data-video");
         if (!videoSrc) return;
 
-        // Create video element
         const video = document.createElement("video");
         video.src = videoSrc;
         video.muted = true;
         video.loop = true;
         
-        // Copy all image styling
+     
         video.style.position = 'absolute';
         video.style.top = `${img.offsetTop}px`;
         video.style.left = `${img.offsetLeft}px`;
@@ -20,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
         video.style.objectFit = 'cover';
         video.style.display = 'none';
 
-        // Insert video immediately after the image
+       
         img.parentNode.insertBefore(video, img.nextSibling);
 
-        // Hover handlers
+  
         img.addEventListener("mouseenter", () => {
             video.style.display = 'block';
             video.play();
-            img.style.opacity = '0'; // Hide image but maintain layout
+            img.style.opacity = '0'; 
         });
 
         img.addEventListener("mouseleave", () => {
@@ -43,12 +42,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const thankYouMessage = document.getElementById("thankYouMessage");
 
     subscribeButton.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent any default button behavior
+        event.preventDefault(); 
 
-        // Hide input field and button
+  
         subscribeContainer.style.display = "none";
 
-        // Show thank-you message
+   
         thankYouMessage.style.display = "block";
     });
 });
@@ -91,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Initialize with the first slide's text
+    
     updateText(slides[0]);
 });
 
@@ -103,13 +102,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileNav = document.querySelector('.mobile-nav');
     const navItems = document.querySelectorAll('.nav-items a');
 
-    // Toggle menu
+  
     hamburger.addEventListener('click', function() {
         this.classList.toggle('active');
         mobileNav.classList.toggle('active');
     });
 
-    // Close menu on item click
+  
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             hamburger.classList.remove('active');
@@ -117,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close menu when clicking outside
+ 
     document.addEventListener('click', (e) => {
         if (!mobileNav.contains(e.target) && !hamburger.contains(e.target)) {
             hamburger.classList.remove('active');
