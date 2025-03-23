@@ -9,11 +9,11 @@ a{
 .nav{
 
         display: flex;
-        justify-content: flex-start; /* Changed from space-evenly */
+        justify-content: flex-start; 
         align-items: center;
-        gap: 40px; /* Reduced from 49px */
+        gap: 40px; 
         margin-top: 50px;
-        padding: 0 100px; /* Added container padding */
+        padding: 0 100px;
         position: relative;
         z-index: 1000;
   
@@ -27,7 +27,7 @@ a{
     padding: 10px 30px;
     cursor: pointer;  
    
-    margin-left:780px; /* Pushes donate to far right */
+    margin-left:780px; 
 
 }
 
@@ -348,8 +348,8 @@ object-fit: cover;
 .subscribe-container {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid black; /* Underline effect */
-    width: 300px; /* Adjust as needed */
+    border-bottom: 2px solid black; 
+    width: 300px;
     position: relative;
 }
 
@@ -371,7 +371,7 @@ object-fit: cover;
 }
 
 .subscribe-button:hover {
-    transform: translateX(3px); /* Slight movement on hover */
+    transform: translateX(3px); 
 }
 
 .hidden {
@@ -461,14 +461,7 @@ object-fit: cover;
        margin-bottom : 80px;
       }
 
-/* coin animation */
-/* Container to hold coin & text */
 
-
-
-
-
-/* carousel */
 .carousel-container {
     position: relative;
     display: flex;
@@ -588,16 +581,11 @@ button {
 }
 
 
-
-
-
-
-
 .carousel-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Adjust spacing */
+    gap: 20px; 
 }
 
 
@@ -621,7 +609,7 @@ img[data-video] {
     position: relative;
     transition: opacity 0.3s ease;
 }
-/* Add these styles */
+
 .error {
     color: #ff0000;
     margin-top: 40px;
@@ -664,7 +652,7 @@ img[data-video] {
     opacity: 0.7;
 }
 
-/* Mobile Menu */
+
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -721,10 +709,10 @@ img[data-video] {
     animation: smoothEntry 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
-/* Delay for different elements */
+
 .smooth:nth-child(1) { animation-delay: 0.2s; }
 .smooth:nth-child(2) { animation-delay: 0.4s; }
-.smooth:nth-child(3) { animation-delay: 0.6s; } /* Add more as needed */
+.smooth:nth-child(3) { animation-delay: 0.6s; } 
 
 @keyframes smoothEntry {
     from {
