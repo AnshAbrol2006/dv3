@@ -11,9 +11,9 @@ a{
         display: flex;
         justify-content: flex-start; 
         align-items: center;
-        gap: 40px; 
+        gap: 40px;
         margin-top: 50px;
-        padding: 0 100px;
+        padding: 0 100px; 
         position: relative;
         z-index: 1000;
   
@@ -21,12 +21,10 @@ a{
 .donate {
     font-size: 1.1rem;
     background-color: white;
-    
     border: 2px solid #000;
     border-radius: 25px;
     padding: 10px 30px;
     cursor: pointer;  
-   
     margin-left:780px; 
 
 }
@@ -275,6 +273,7 @@ object-fit: cover;
     display : flex;
     justify-content: space-evenly;
     gap : 10px;
+    margin-top: 100px;
     
 }
 .first img{
@@ -349,7 +348,7 @@ object-fit: cover;
     display: flex;
     align-items: center;
     border-bottom: 2px solid black; 
-    width: 300px;
+    width: 300px; 
     position: relative;
 }
 
@@ -368,6 +367,8 @@ object-fit: cover;
     font-size: 1.5rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    position: relative;
+    top : 240px;
 }
 
 .subscribe-button:hover {
@@ -462,6 +463,7 @@ object-fit: cover;
       }
 
 
+
 .carousel-container {
     position: relative;
     display: flex;
@@ -479,10 +481,15 @@ object-fit: cover;
 .slide {
     display: none;
     position: relative;
+    transition : 700ms opacity ease-in-out;
+    opacity : 0;
+   
 }
 
 .slide.active {
     display: block;
+    animation-name: fadeIn;
+    opacity : 1;
 }
 
 .slide img {
@@ -490,24 +497,6 @@ object-fit: cover;
     height: 45%;
 }
 
-/* .text-container {
-    position: absolute;
-    top: 30%;
-    left: -50%;
-    transform: translateY(-50%);
-    background: white;
-    padding: 20px;
-    font-size: 24px;
-    color: black;
-    font-weight: bold;
-}
-
-.text-container a {
-    display: block;
-    margin-top: 10px;
-    color: green;
-    text-decoration: none;
-} */
 
 .prev, .next {
     position: absolute;
@@ -515,7 +504,6 @@ object-fit: cover;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border: none;
     padding: 10px;
     cursor: pointer;
     font-size: 24px;
@@ -527,27 +515,6 @@ object-fit: cover;
 
 .next {
     right: 10px;
-}
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    overflow: hidden;
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
-    display: none;
-    text-align: center;
-}
-
-.carousel-item.active {
-    display: block;
 }
 
 .carousel-caption {
@@ -561,16 +528,6 @@ object-fit: cover;
     border-radius: 5px;
 }
 
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
 
 .prev {
     left: 10px;
@@ -580,6 +537,16 @@ button {
     right: 10px;
 }
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .carousel-container {
     display: flex;
@@ -588,25 +555,7 @@ button {
     gap: 20px; 
 }
 
-
-
-/* .text-container p {
-    position: relative;
-    font-size: 3rem;
-    word-wrap: break-word;
-    bottom: 280px;
-    width: 400px;
-}
-
-.text-container a {
-    position: relative;
-    bottom: 180px;
-    font-size: 2rem;
-    color: rgb(92, 151, 3);
-    text-decoration: none;
-} */
 img[data-video] {
-    position: relative;
     transition: opacity 0.3s ease;
 }
 
@@ -625,9 +574,6 @@ img[data-video] {
     margin-top: 60px;
     color: green;
 }
-
-
-
 
 .hamburger {
     position: fixed;
@@ -712,7 +658,7 @@ img[data-video] {
 
 .smooth:nth-child(1) { animation-delay: 0.2s; }
 .smooth:nth-child(2) { animation-delay: 0.4s; }
-.smooth:nth-child(3) { animation-delay: 0.6s; } 
+.smooth:nth-child(3) { animation-delay: 0.6s; }
 
 @keyframes smoothEntry {
     from {
@@ -727,5 +673,21 @@ img[data-video] {
 .slide img{
     height : 400px;
     width : 500px;
-    object-fit: cover;
+    background-size: cover;
 }
+.fade-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.4s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
